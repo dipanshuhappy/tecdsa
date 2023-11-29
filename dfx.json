@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "tecdsa_backend": {
+      "candid": "src/tecdsa_backend/tecdsa_backend.did",
+      "package": "tecdsa_backend",
+      "type": "rust"
+    },
+    "tecdsa_frontend": {
+      "dependencies": [
+        "tecdsa_backend"
+      ],
+      "source": [
+        "src/tecdsa_frontend/assets"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
