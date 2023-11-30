@@ -82,7 +82,7 @@ async fn public_key() -> Result<PublicKeyReply, String> {
 #[update]
 async fn get_signature() -> Result<SignatureReply, String> {
     let request = SignWithECDSA {
-        message_hash: sha256("azadnet").to_vec(),
+        message_hash: sha256(&"azadnet".to_string()).to_vec(),
         derivation_path: vec![],
         key_id: EcdsaKeyIds::ProductionKey1.to_key_id(),
     };
